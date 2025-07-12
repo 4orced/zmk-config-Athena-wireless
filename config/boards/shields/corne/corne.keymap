@@ -1,0 +1,2 @@
+New-Item -ItemType Directory -Path "config\boards\shields\corne" -Force
+notepad config\boards\shields\corne\corne.keymap
