@@ -1,5 +1,3 @@
 #pragma once
-
 #include <lvgl.h>
-
-LV_IMG_DECLARE(my_logo_img);
+extern const lv_img_dsc_t my_logo_img;
