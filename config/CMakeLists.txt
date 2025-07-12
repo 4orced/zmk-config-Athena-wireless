@@ -6,3 +6,4 @@ target_sources(app PRIVATE
 )
 
 set(ZMK_DISPLAY_RENDER_OVERRIDE TRUE)
+set(CONF_FILE "corne.conf")
