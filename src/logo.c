@@ -1,6 +1,10 @@
-#include <lvgl.h>
+#include "logo.h"
 
-static const uint8_t my_logo[] = {
+#ifndef LV_ATTRIBUTE_MEM_ALIGN
+#define LV_ATTRIBUTE_MEM_ALIGN
+#endif
+
+const uint8_t bandits_logo_map[] = {
   // 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 223, 
 223, 159, 31, 127, 127, 63, 63, 63, 255, 255, 127, 127, 127, 127, 255, 255, 
 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 63, 159, 79, 15, 
@@ -32,14 +36,14 @@ static const uint8_t my_logo[] = {
 248, 248, 248, 248, 240, 240, 240, 240, 243, 231, 255, 255, 255, 255, 255, 255, 
 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 
-255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 (Plain byte array, vertical, 1-bit, 128x32)
+255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 
 };
 
-const lv_img_dsc_t my_logo_img = {
-    .header.always_zero = 0,
-    .header.w = 128,
-    .header.h = 32,
-    .data_size = sizeof(my_logo),
-    .header.cf = LV_IMG_CF_INDEXED_1BIT,
-    .data = my_logo,
+const lv_img_dsc_t bandits_logo = {
+  .header.always_zero = 0,
+  .header.w = 68,          // or your width
+  .header.h = 140,         // or your height
+  .data_size = sizeof(bandits_logo_map),
+  .header.cf = LV_IMG_CF_INDEXED_1BIT,
+  .data = bandits_logo_map,
 };
